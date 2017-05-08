@@ -1,0 +1,27 @@
+{
+  "name": "functional-flikr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "lint": "eslint src/**/*.js",
+    "copy": "mkdir -p dist && cp index.html dist/",
+    "compile": "rollup -c",
+    "build": "npm run clean && npm run copy && npm run compile",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephen Melnicki <smelnicki3@gmail.com>",
+  "license": "WTFPL",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  }
+}
